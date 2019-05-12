@@ -1,0 +1,28 @@
+<%- include('./layout/header.ejs')%>
+<h1>文章--<%= articles.length%></h1>
+<div class="list-group">
+    <% articles.forEach(items => { %>
+    <a class="list-group-item"><%= items.title%></a>
+    <% }) %>
+
+</div>
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<%- include('./layout/footer.ejs')%>
